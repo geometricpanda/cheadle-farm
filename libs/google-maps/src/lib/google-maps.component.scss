@@ -1,0 +1,14 @@
+.google-map {
+  display: flex;
+  flex-grow: 1;
+  height: 100%;
+  background-color: var(--color-background);
+}
+
+.google-map__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  color: var(--color-primary);
+}

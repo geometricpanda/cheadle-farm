@@ -1,0 +1,64 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.footer-wrapper {
+  background-color: var(--brown);
+}
+
+.footer-link-groups {
+  display: block;
+
+  @include breakpoint-up($breakpoint-sm) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.footer-link-title {
+  margin-bottom: 10px;
+}
+
+.footer-links {
+  margin: 0 -10px 20px;
+  padding: 0 0;
+  list-style: none;
+}
+
+.footer-link {
+  display: inline-block;
+  border: 1px solid transparent;
+  padding: 5px 10px;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-family: var(--body-font-family);
+  font-weight: 300;
+  font-size: 1rem;
+  color: var(--color-white);
+  outline: none;
+  transition: color 0.2s ease-in-out;
+
+  &:hover {
+    color: var(--corn);
+  }
+
+  &:focus {
+    border-color: white;
+  }
+
+}
+
+.footer-link,
+.footer-legals,
+.footer-link-title {
+  color: var(--color-white);
+}
+
+.footer-legals {
+  font-family: var(--body-font-family);
+  font-style: italic;
+  letter-spacing: 1px;
+  font-size: 1rem;
+  line-height: 1.4em;
+  margin-bottom: 20px;
+  opacity: 0.8;
+}

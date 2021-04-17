@@ -1,0 +1,16 @@
+<div class="card">
+
+  <div class="card__text" *ngIf="card.title || card.body?.length">
+    <p class="card__title" *ngIf="card.title">{{card.title}}</p>
+    <p class="card__body" *ngIf="card.body?.length">
+      <app-cms-rich-text-renderer [text]="card.body"></app-cms-rich-text-renderer>
+    </p>
+  </div>
+
+  <picture class="card__img">
+    <source [srcset]="card.image.default" media="(min-width: 768px)">
+    <source [srcset]="card.image.wide" media="(min-width: 376px)">
+    <img [src]="card.image.default" [alt]="card.image.alt" [attr.aria-hidden]="!!card.title || !!card.body" />
+  </picture>
+
+</div>

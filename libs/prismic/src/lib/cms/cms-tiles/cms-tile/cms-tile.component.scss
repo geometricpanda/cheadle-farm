@@ -1,0 +1,63 @@
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 1150px,
+);
+
+:host {
+  display: block;
+}
+
+.tile {
+  background-color: var(--dark-grey);
+  color: var(--white);
+  overflow: hidden;
+  height: 0;
+  padding-bottom: 360px;
+  position: relative;
+
+  @media (min-width: map-get($grid-breakpoints, 'lg')) {
+    padding-bottom: 100%;
+  }
+}
+
+.tile--wide {
+  @media (min-width: map-get($grid-breakpoints, 'lg')) {
+    padding-bottom: calc(50% - var(--spacing-sm));
+  }
+}
+
+.tile__img {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.8;
+  transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
+}
+
+.tile__text {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: var(--spacing-lg) var(--spacing-md) var(--spacing-xs);
+  z-index: 1;
+  display: block;
+  background: var(--dark-blue-gradient);
+}
+
+.tile__title {
+  color: var(--white) !important;
+  font-family: var(--font-family);
+  font-size: 1.3rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+.tile__body {
+  margin-bottom: var(--spacing-sm);
+}
+
+a:host .tile__title {
+  text-decoration: underline;
+}

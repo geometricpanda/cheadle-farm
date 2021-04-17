@@ -1,0 +1,21 @@
+<div container>
+  <div class="hero">
+
+    <div class="hero__text" *ngIf="slice.title || slice.body?.length">
+      <p class="hero__title" *ngIf="slice.title">{{slice.title}}</p>
+      <p class="hero__body" *ngIf="slice.body?.length">
+        <app-cms-rich-text-renderer [text]="slice.body"></app-cms-rich-text-renderer>
+      </p>
+    </div>
+
+    <picture>
+      <source [srcset]="slice.image.large" media="(min-width: 1150px)">
+      <source [srcset]="slice.image.medium" media="(min-width: 768px)">
+      <img class="hero__img"
+           [src]="slice.image.default"
+           [alt]="slice.image.alt"
+           [attr.aria-hidden]="!!slice.title || !!slice.body" />
+    </picture>
+
+  </div>
+</div>

@@ -1,0 +1,18 @@
+@mixin breakpoint-up-and-desktop($breakpoint) {
+  @media (min-width: #{$breakpoint}) and (pointer: fine) {
+    @content;
+  }
+}
+
+@mixin breakpoint-up($breakpoint) {
+  @media (min-width: #{$breakpoint}) {
+    @content;
+  }
+}
+
+@mixin breakpoint-down($breakpoint) {
+  @media (max-width: #{$breakpoint - 1}) {
+    @content;
+  }
+}
+

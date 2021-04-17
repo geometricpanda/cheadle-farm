@@ -1,0 +1,19 @@
+<ng-container *ngIf="content; else loading">
+  <ng-container *ngFor="let slice of content.slices" [ngSwitch]="slice.type">
+    <app-cms-hero *ngSwitchCase="SLICE.HERO" [slice]="slice"></app-cms-hero>
+    <app-cms-cards *ngSwitchCase="SLICE.CARDS" [slice]="slice"></app-cms-cards>
+    <app-cms-tiles *ngSwitchCase="SLICE.TILES" [slice]="slice"></app-cms-tiles>
+    <app-cms-text *ngSwitchCase="SLICE.TEXT" [slice]="slice"></app-cms-text>
+    <app-cms-collection *ngSwitchCase="SLICE.COLLECTION" [slice]="slice"></app-cms-collection>
+  </ng-container>
+</ng-container>
+
+<ng-template #loading>
+  <div container>
+    <div row center>
+      <div col="auto">
+        <app-loading></app-loading>
+      </div>
+    </div>
+  </div>
+</ng-template>

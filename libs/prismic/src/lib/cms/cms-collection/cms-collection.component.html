@@ -1,0 +1,7 @@
+<div container>
+  <div class="collection-item" *ngFor="let item of (collection | async) | keyvalue">
+    <h2>{{item.value.title}}</h2>
+    <app-cms-rich-text-renderer [text]="item.value.description"></app-cms-rich-text-renderer>
+    <a [routerLink]="slice.canonicals ? item.value.canonical : item.key">Read More</a>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<div class="menu" [class.menu--expanded]="menuService.isOpen">
+
+  <div class="menu__sidebar" *ngIf="menuService.isOpen" @slideInOut>
+
+    <button class="menu__close" aria-label="Close Menu" (click)="close()">
+      <cheadle-farm-cross></cheadle-farm-cross>
+    </button>
+
+    <ul class="menu__links">
+      <li class="menu__link-item" *ngFor="let link of links">
+        <a class="menu__link"
+           [routerLink]="link.routerlink"
+           routerLinkActive="menu__link--active"
+           [routerLinkActiveOptions]="{exact: true}"
+        >{{link.title}}</a>
+      </li>
+
+    </ul>
+
+  </div>
+
+  <div class="menu__page" #page (scroll)="onScroll($event)">
+    <ng-content></ng-content>
+  </div>
+</div>

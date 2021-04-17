@@ -1,0 +1,26 @@
+.hamburger {
+  height: 46px;
+  width: 46px;
+  padding: 10px;
+  border: 1px solid transparent;
+  background-color: transparent;
+  color: var(--corn);
+  outline: none;
+  overflow: hidden;
+  transition-property: color, border;
+  transition-duration: 0.3s;
+
+  &:focus {
+    border-color: var(--color-white);
+    color: var(--color-white);
+  }
+}
+
+.hamburger__svg {
+  width: 100%;
+  height: 100%;
+
+  rect {
+    fill: currentColor;
+  }
+}

@@ -14,7 +14,11 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@cheadle-farm/prismic": ["libs/prismic/src/index.ts"],
+      "@cheadle-farm/menu": ["libs/menu/src/index.ts"],
+      "@cheadle-farm/google-maps": ["libs/google-maps/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

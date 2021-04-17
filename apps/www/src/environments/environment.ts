@@ -4,6 +4,7 @@
 
 export const environment = {
   production: false,
+  googleMapsPublicKey: 'AIzaSyAiC3MAP35ERFgtaDtFo9GohDGkwxVRVRk',
 };
 
 /*

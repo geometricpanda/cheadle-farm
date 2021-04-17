@@ -1,0 +1,89 @@
+<ng-container *ngFor="let block of text" [ngSwitch]="block.type">
+
+  <!-- HEADING 1-->
+  <ng-container *ngSwitchCase="TYPE.HEADING1"
+                [ngTemplateOutlet]="heading1"
+                [ngTemplateOutletContext]="{$implicit: block}">
+  </ng-container>
+
+  <!-- HEADING 2-->
+  <ng-container *ngSwitchCase="TYPE.HEADING2"
+                [ngTemplateOutlet]="heading2"
+                [ngTemplateOutletContext]="{$implicit: block}">
+  </ng-container>
+
+  <!-- HEADING 3-->
+  <ng-container *ngSwitchCase="TYPE.HEADING3"
+                [ngTemplateOutlet]="heading3"
+                [ngTemplateOutletContext]="{$implicit: block}">
+  </ng-container>
+
+  <!-- HEADING 4-->
+  <ng-container *ngSwitchCase="TYPE.HEADING4"
+                [ngTemplateOutlet]="heading4"
+                [ngTemplateOutletContext]="{$implicit: block}">
+  </ng-container>
+
+  <!-- HEADING 5-->
+  <ng-container *ngSwitchCase="TYPE.HEADING5"
+                [ngTemplateOutlet]="heading5"
+                [ngTemplateOutletContext]="{$implicit: block}">
+  </ng-container>
+
+  <!-- PARAGRAPH -->
+  <ng-container *ngSwitchCase="TYPE.PARAGRAPH"
+                [ngTemplateOutlet]="paragraph"
+                [ngTemplateOutletContext]="{$implicit: block}">
+  </ng-container>
+
+  <!-- ORDERED LIST -->
+  <ng-container *ngSwitchCase="TYPE.ORDERED_LIST"
+                [ngTemplateOutlet]="orderedList"
+                [ngTemplateOutletContext]="{$implicit: block}">
+  </ng-container>
+
+  <!-- UNORDERED LIST -->
+  <ng-container *ngSwitchCase="TYPE.UNORDERED_LIST"
+                [ngTemplateOutlet]="unorderedList"
+                [ngTemplateOutletContext]="{$implicit: block}">
+  </ng-container>
+
+</ng-container>
+
+<ng-template #heading1 let-content>
+  <h1 [innerHTML]="content.text | appCmsRichTextRenderer"></h1>
+</ng-template>
+
+<ng-template #heading2 let-content>
+  <h2 [innerHTML]="content.text | appCmsRichTextRenderer"></h2>
+</ng-template>
+
+<ng-template #heading3 let-content>
+  <h3 [innerHTML]="content.text | appCmsRichTextRenderer"></h3>
+</ng-template>
+
+<ng-template #heading4 let-content>
+  <h4 [innerHTML]="content.text | appCmsRichTextRenderer"></h4>
+</ng-template>
+
+<ng-template #heading5 let-content>
+  <h5 [innerHTML]="content.text | appCmsRichTextRenderer"></h5>
+</ng-template>
+
+<ng-template #paragraph let-content>
+  <p [innerHTML]="content.text | appCmsRichTextRenderer"></p>
+</ng-template>
+
+<ng-template #orderedList let-content>
+  <ol>
+    <li *ngFor="let item of content.list"
+        [innerHTML]="item.text | appCmsRichTextRenderer"></li>
+  </ol>
+</ng-template>
+
+<ng-template #unorderedList let-content>
+  <ul>
+    <li *ngFor="let item of content.list"
+        [innerHTML]="item.text | appCmsRichTextRenderer"></li>
+  </ul>
+</ng-template>

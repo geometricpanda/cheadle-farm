@@ -1,0 +1,16 @@
+<ul class="links" [class.links--open]="open">
+
+  <li *ngFor="let link of appLinksService.mainLinks"
+      class="links-item"
+      routerLinkActive="links-item--active"
+      [routerLinkActiveOptions]="{exact: true}">
+
+    <a class="link"
+       routerLinkActive="link--active"
+       [routerLinkActiveOptions]="{exact: true}"
+       [routerLink]="link.routerlink">
+      {{link.title}}
+    </a>
+
+  </li>
+</ul>

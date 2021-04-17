@@ -1,0 +1,57 @@
+@import "../config";
+@import "../utils";
+
+$columns: 12;
+
+@mixin _grid($key) {
+  $columnWidth: 100% / $columns;
+
+  @for $colCount from 1 through $columns {
+    :host[#{$key}="#{$colCount}"] {
+      max-width: $columnWidth * $colCount;
+    }
+  }
+
+  :host[#{$key}="auto"] {
+    flex-shrink: 1;
+    flex-grow: 0;
+  }
+}
+
+@mixin _utils($key) {
+  :host[#{$key}="none"] {
+    display: none;
+  }
+  :host[#{$key}="block"] {
+    display: block;
+  }
+  :host[#{$key}="flex"] {
+    display: flex;
+  }
+}
+
+:host {
+  display: flex;
+  flex-direction: column;
+  padding-left: $grid-gutter-width;
+  padding-right: $grid-gutter-width;
+  flex-grow: 1;
+}
+
+@include _utils(col);
+@include _grid(col);
+
+@include breakpoint-up(sm) {
+  @include _grid(sm);
+  @include _utils(sm);
+}
+
+@include breakpoint-up(md) {
+  @include _grid(md);
+  @include _utils(md);
+}
+
+@include breakpoint-up(lg) {
+  @include _grid(lg);
+  @include _utils(lg);
+}

@@ -1,0 +1,20 @@
+.link {
+  display: inline-block;
+  background-color: transparent;
+  color: var(--corn);
+
+  font-family: var(--body-font-family);
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+  line-height: 1.5;
+  text-decoration: none;
+
+  transition-property: color, border;
+  transition-duration: 0.3s;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    color: var(--color-white);
+  }
+}

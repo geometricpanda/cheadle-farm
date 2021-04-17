@@ -1,0 +1,59 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.header {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 10px 5px;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 97;
+  background-color: var(--brown);
+
+  @include breakpoint-up-and-desktop($breakpoint-md) {
+    margin: auto;
+    position: relative;
+  }
+}
+
+.header__row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  @include breakpoint-up-and-desktop($breakpoint-md) {
+    justify-content: center;
+  }
+}
+
+.header__text {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.header-icon {
+  flex-shrink: 1;
+
+  @include breakpoint-up-and-desktop($breakpoint-md) {
+    display: none;
+  }
+}
+
+.header__links {
+  width: 100%;
+}
+
+.header__logo {
+  color: rgba(255,255,255, 0.4);
+  width: 50px;
+  margin: 5px auto;
+  position: relative;
+
+  @include breakpoint-up-and-desktop($breakpoint-md) {
+    width: 100px;
+    margin: 20px auto;
+  }
+}

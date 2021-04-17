@@ -1,0 +1,21 @@
+@import "../config";
+
+:host {
+  display: flex;
+  margin-left: $grid-gutter-width * -1;
+  margin-right: $grid-gutter-width * -1;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+:host[around]{
+  justify-content: space-around;
+}
+
+:host[center]{
+  justify-content: center;
+}
+
+:host[vcenter]{
+  align-items: center;
+}

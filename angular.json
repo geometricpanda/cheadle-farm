@@ -154,9 +154,7 @@
           "options": {
             "browserTarget": "www:build:production",
             "serverTarget": "www:server:production",
-            "routes": [
-              "/"
-            ]
+            "routes": ["/"]
           },
           "configurations": {
             "production": {}
@@ -186,6 +184,81 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": ["apps/www-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    },
+    "prismic": {
+      "projectType": "library",
+      "root": "libs/prismic",
+      "sourceRoot": "libs/prismic/src",
+      "prefix": "cheadle-farm",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/prismic/src/**/*.ts",
+              "libs/prismic/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/prismic"],
+          "options": {
+            "jestConfig": "libs/prismic/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "menu": {
+      "projectType": "library",
+      "root": "libs/menu",
+      "sourceRoot": "libs/menu/src",
+      "prefix": "cheadle-farm",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/menu/src/**/*.ts",
+              "libs/menu/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/menu"],
+          "options": {
+            "jestConfig": "libs/menu/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "google-maps": {
+      "projectType": "library",
+      "root": "libs/google-maps",
+      "sourceRoot": "libs/google-maps/src",
+      "prefix": "cheadle-farm",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/google-maps/src/**/*.ts",
+              "libs/google-maps/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/google-maps"],
+          "options": {
+            "jestConfig": "libs/google-maps/jest.config.js",
+            "passWithNoTests": true
           }
         }
       }
