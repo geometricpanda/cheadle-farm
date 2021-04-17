@@ -155,15 +155,15 @@ export class CmsContactFormComponent implements OnInit, OnDestroy {
 
   onSubmit() {
     this.submitted = true;
-    // this.errors = this.calculateErrors();
+    this.errors = this.calculateErrors();
 
-    // setTimeout(() => this.oopsValidator.nativeElement.focus(), 100);
+    setTimeout(() => this.oopsValidator.nativeElement.focus(), 100);
 
-    // if (this.form.valid) {
+    if (this.form.valid) {
       this.hideError();
       this.submit.disable();
       this.postForm();
-    // }
+    }
   }
 
   postForm() {
