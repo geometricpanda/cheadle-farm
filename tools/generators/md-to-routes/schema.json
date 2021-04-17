@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "id": "md-to-json",
+  "type": "object",
+  "properties": {
+    "prismic": {
+      "type": "string",
+      "description": "URL to your Prismic API",
+      "useColor": {
+        "type": "string"
+      }
+    },
+    "outFile": {
+      "type": "string",
+      "description": "Path to place routes",
+      "useColor": {
+        "type": "string"
+      }
+    }
+  },
+  "required": ["prismic", "outFile"]
+}

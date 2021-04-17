@@ -15,7 +15,7 @@ export class PrismicService {
       Prismic.Predicates.at('my.page.uid', path)
     ];
 
-    return this.api.then(api => api.query(query));
+    return this.api.then(api => api.query(query, {}));
   }
 
   getPagesByTags(tags: string[], knownUids: string[] = []): Promise<PrismicApiSearchResponse<PrismicPage>> {
@@ -25,7 +25,7 @@ export class PrismicService {
       ...knownUids.map(uid => Prismic.Predicates.not('my.page.uid', uid))
     ];
 
-    return this.api.then(api =>   api.query(query));
+    return this.api.then(api => api.query(query, {}));
   }
 
 }

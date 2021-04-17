@@ -154,7 +154,7 @@
           "options": {
             "browserTarget": "www:build:production",
             "serverTarget": "www:server:production",
-            "routes": ["/"]
+            "routesFile": "apps/www/_routes.txt"
           },
           "configurations": {
             "production": {}
