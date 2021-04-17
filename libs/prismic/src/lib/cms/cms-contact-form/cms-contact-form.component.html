@@ -28,6 +28,7 @@
       <form [formGroup]='form'
             [name]='formName'
             (ngSubmit)='onSubmit()'
+            *ngIf='!submissionSuccess'
             action='./'
             data-netlify='true'
             netlify-honeypot='bot-field'>
