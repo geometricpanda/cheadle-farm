@@ -1,0 +1,132 @@
+<div container class='mb-4'>
+  <div row center>
+    <div col='12' md='8' lg='6'>
+
+
+      <div class='mb-4 error' tabindex='-1' *ngIf='submissionSuccess' #successEl>
+        <h3>Thanks</h3>
+        <p>We've received your form, thanks. A member of our team will be in touch soon.</p>
+      </div>
+
+      <div class='mb-4 error' tabindex='-1' *ngIf='submitted && errors.length' #oopsValidator>
+        <h3>Oops It looks like we have a problem</h3>
+        <ul>
+          <li *ngFor='let error of errors'>
+            <p>{{error}}</p>
+          </li>
+        </ul>
+      </div>
+
+      <div class='mb-4 error' tabindex='-1' *ngIf='submissionError' #oopsError>
+        <h3>Oops,</h3>
+        <p>
+          It looks like there's been a problem submitting the form.
+          Please try again later or feel free to give us a call.
+        </p>
+      </div>
+
+      <form [formGroup]='form'
+            [name]='formName'
+            (ngSubmit)='onSubmit()'
+            action='./'
+            data-netlify='true'
+            netlify-honeypot='bot-field'>
+
+
+        <input type='hidden'
+               name='form-name'
+               formControlName='formName' />
+
+        <div class='form-control d-none'>
+
+          <div class='form-control__heading'>
+            <label class='form-control__label form-control__label--required' for='bot-field'>
+              Don't fill this out if you're human
+            </label>
+          </div>
+
+          <div class='form-control__body'>
+            <input id='bot-field'
+                   type='text'
+                   name='bot-field'
+                   formControlName='botField' />
+          </div>
+
+        </div>
+
+        <div class='form-control'>
+          <div class='form-control__heading'>
+            <label class='form-control__label form-control__label--required' for='name'>Name</label>
+          </div>
+          <div class='form-control__body'>
+            <input class='form-control__input'
+                   [class.form-control__input--error]='submitted && name.invalid'
+                   id='name'
+                   type='text'
+                   autocomplete='name'
+                   name='Name'
+                   formControlName='name' />
+          </div>
+        </div>
+
+
+        <div class='form-control'>
+          <div class='form-control__heading'>
+            <label class='form-control__label' for='email'>Email</label>
+          </div>
+          <div class='form-control__body'>
+            <input class='form-control__input'
+                   [class.form-control__input--error]='submitted && (form.errors?.emailOrTel || email.invalid)'
+                   id='email'
+                   type='email'
+                   name='Email'
+                   autocomplete='email'
+                   formControlName='email' />
+          </div>
+        </div>
+
+        <div class='form-control'>
+          <div class='form-control__heading'>
+            <label class='form-control__label' for='phone'>Phone</label>
+          </div>
+          <div class='form-control__body'>
+            <input class='form-control__input'
+                   [class.form-control__input--error]='submitted && (form.errors?.emailOrTel || tel.invalid)'
+                   id='phone'
+                   name='Phone'
+                   type='tel'
+                   formControlName='tel' />
+          </div>
+        </div>
+
+
+        <div class='form-control'>
+
+          <div class='form-control__heading'>
+            <label class='form-control__label form-control__label--required' for='message'>Message</label>
+          </div>
+
+          <div class='form-control__body'>
+      <textarea class='form-control__input'
+                [class.form-control__input--error]='submitted && message.invalid'
+                id='message'
+                name='Message'
+                formControlName='message'
+                rows='5'>
+      </textarea>
+          </div>
+        </div>
+
+
+        <div class='form-control'>
+          <div class='form-control__body'>
+            <input type='submit' class='form-control__button' formControlName='submit' />
+          </div>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</div>
+

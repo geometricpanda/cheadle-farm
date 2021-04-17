@@ -2,10 +2,10 @@
   <div class="hero">
 
     <div class="hero__text" *ngIf="slice.title || slice.body?.length">
-      <p class="hero__title" *ngIf="slice.title">{{slice.title}}</p>
-      <p class="hero__body" *ngIf="slice.body?.length">
+      <h1 class="hero__title" *ngIf="slice.title">{{slice.title}}</h1>
+      <span class="hero__body" *ngIf="slice.body?.length">
         <app-cms-rich-text-renderer [text]="slice.body"></app-cms-rich-text-renderer>
-      </p>
+      </span>
     </div>
 
     <picture>

@@ -34,6 +34,7 @@ export interface CardsSliceInterface {
   type: PRISMIC_SLICE.CARDS;
   body: CardInterface[]
 }
+
 export interface TilesSliceInterface {
   type: PRISMIC_SLICE.TILES;
   body: TileInterface[]
@@ -70,11 +71,16 @@ export interface CollectionSliceInterface {
   canonicals: boolean;
 }
 
+export interface ContactFormSliceInterface {
+  type: PRISMIC_SLICE.CONTACT_FORM,
+}
+
 export type SliceInterface =
   | TextSliceInterface
   | HeroSliceInterface
   | CardsSliceInterface
   | TilesSliceInterface
-  | CollectionSliceInterface;
+  | CollectionSliceInterface
+  | ContactFormSliceInterface;
 
 export type SlicesInterface = SliceInterface[];

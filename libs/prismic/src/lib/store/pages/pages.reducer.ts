@@ -1,10 +1,8 @@
 import { createReducer, on } from '@ngrx/store';
 import { hydratePages, savePage, SavePageActionInterface } from './pages.actions';
-import { RichTextInterface, SlicesInterface, slicesParser, parseRichTextUtil } from '../slices';
+import { SlicesInterface, slicesParser } from '../slices';
 
 export interface PageInterface {
-  title: string;
-  description: RichTextInterface[];
   meta_title: string;
   meta_description: string;
   tags: string[];
@@ -29,13 +27,12 @@ const savePageReducer = (state: PagesReducerState, { payload }: SavePageActionIn
       meta_title: payload.data.meta_title,
       meta_description: payload.data.meta_description,
       canonical: payload.data.canonical,
-      title: payload.data.title,
-      description: parseRichTextUtil(payload.data.description),
       slices: slicesParser(payload.data.body),
       tags: payload.tags
     };
 
   } catch (e) {
+    console.log(e,'oops');
     // Suppress Errors here - we either have a page or we dont
     // TODO: Maybe we use this to inject a 404?
   }

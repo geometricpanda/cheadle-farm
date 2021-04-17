@@ -3,7 +3,14 @@ import { CommonModule } from '@angular/common';
 import { RendererComponent } from './renderer.component';
 import { LoadingModule } from '../loading/loading.module';
 
-import { CmsHeroModule, CmsTextModule, CmsCardsModule, CmsTilesModule, CmsCollectionModule } from '../cms';
+import {
+  CmsHeroModule,
+  CmsTextModule,
+  CmsCardsModule,
+  CmsTilesModule,
+  CmsCollectionModule,
+  CmsContactFormModule
+} from '../cms';
 import { GridModule } from '../common';
 
 @NgModule({
@@ -21,6 +28,7 @@ import { GridModule } from '../common';
     LoadingModule,
     CmsTilesModule,
     CmsCollectionModule,
+    CmsContactFormModule,
     GridModule,
   ],
 })

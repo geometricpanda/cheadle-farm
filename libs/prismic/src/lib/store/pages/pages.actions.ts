@@ -13,7 +13,6 @@ export interface GetPageActionInterface {
     uid: string;
   }
 }
-
 export interface SavePageActionInterface {
   payload: PrismicDocument<PrismicPage>;
 }

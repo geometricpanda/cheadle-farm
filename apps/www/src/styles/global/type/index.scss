@@ -75,6 +75,10 @@ p + p {
   margin-top: -0.5em;
 }
 
+p:last-child {
+  margin-bottom: 0;
+}
+
 li {
   color: var(--color-primary-text);
   font-family: var(--body-font-family);

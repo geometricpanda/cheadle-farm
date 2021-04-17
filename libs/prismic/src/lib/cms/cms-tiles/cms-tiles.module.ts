@@ -5,11 +5,13 @@ import { CmsTilesComponent } from './cms-tiles/cms-tiles.component';
 import { RouterModule } from '@angular/router';
 import { CmsRichTextRendererModule } from '../cms-rich-text-render/cms-rich-text-renderer.module';
 import { GridModule } from '../../common';
+import { CmsTileImgPipe } from './cms-tile/cms-tile-img.pipe';
 
 @NgModule({
   declarations: [
     CmsTileComponent,
     CmsTilesComponent,
+    CmsTileImgPipe,
   ],
   imports: [
     CommonModule,

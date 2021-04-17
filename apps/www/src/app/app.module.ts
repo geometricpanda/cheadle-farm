@@ -13,6 +13,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FooterModule } from './common/footer/footer.module';
 import { HeaderModule } from './common/header/header.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent],
@@ -25,6 +26,7 @@ import { HeaderModule } from './common/header/header.module';
     MenuModule,
     FooterModule,
     GoogleMapsModule,
+    HttpClientModule,
     !environment.production ? StoreDevtoolsModule.instrument() : [],
   ],
   providers: [],

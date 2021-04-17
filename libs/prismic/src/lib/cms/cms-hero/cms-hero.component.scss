@@ -14,10 +14,16 @@ $grid-breakpoints: (
   position: relative;
   overflow: hidden;
   min-height: 560px;
-  margin-bottom: 16px;
+  margin-bottom: 32px;
+  margin-left: -8px;
+  margin-right: -8px;
+  padding: 8px;
 
   @media (min-width: map-get($grid-breakpoints, 'md')) {
     min-height: 400px;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 16px;
   }
 
   @media (min-width: map-get($grid-breakpoints, 'lg')) {
@@ -31,18 +37,21 @@ $grid-breakpoints: (
   top: 50%;
   transform: translate(-50%, -50%);
   position: absolute;
-  opacity: 0.9  ;
+  opacity: 0.9;
 }
 
 .hero__text {
-  position: relative;
-  padding: 0 var(--spacing-lg) var(--spacing-md);
+  font-family: var(--font-family);
+  background-color: var(--brown);
+  position: absolute;
+  padding: 8px;
   z-index: 1;
-  display: block;
-  background: var(--dark-blue-gradient);
+  display: inline-block;
+  left: 0;
+  bottom: 0;
 
   @media (min-width: map-get($grid-breakpoints, 'sm')) {
-    padding: var(--spacing-lg) var(--spacing-lg) var(--spacing-md);
+    padding: 16px;
   }
 
 }
@@ -51,9 +60,5 @@ $grid-breakpoints: (
   color: var(--white) !important;
   font-family: var(--font-family);
   font-size: 1.8rem;
-  margin-bottom: var(--spacing-sm);
-}
-
-.hero__body {
   margin-bottom: var(--spacing-sm);
 }

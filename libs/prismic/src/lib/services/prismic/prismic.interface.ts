@@ -7,6 +7,7 @@ export enum PRISMIC_SLICE {
   CARDS = 'cards',
   TILES = 'tiles',
   COLLECTION = 'collection',
+  CONTACT_FORM = 'contact_form',
 }
 
 export enum PrismicRichTextItemType {
@@ -156,19 +157,22 @@ export interface PrismicCollectionSlice {
   };
 }
 
+export interface PrismicContactFormSlice {
+  slice_type: PRISMIC_SLICE.CONTACT_FORM,
+}
+
 export type PrismicDynamic =
   | PrismicTextSlice
   | PrismicHeroSlice
   | PrismicCardsSlice
   | PrismicTilesSlice
-  | PrismicCollectionSlice;
+  | PrismicCollectionSlice
+  | PrismicContactFormSlice;
 
 export interface PrismicPage {
   meta_title: string;
   meta_description: string;
   canonical: string;
-  title: string;
-  description: PrismicRichTextItem[];
   body: PrismicDynamic[];
   tags: string[];
 }

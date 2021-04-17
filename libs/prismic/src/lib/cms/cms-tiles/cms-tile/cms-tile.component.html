@@ -1,17 +1,11 @@
-<div class="tile" [class.tile--wide]="tile.wide">
+<div class='tile'
+     [style.background-image]='(tile.wide ? tile.image.wide : tile.image.default) | cmsTileImg'>
 
-  <div class="tile__text" *ngIf="tile.title || tile.body?.length">
-    <p class="tile__title" *ngIf="tile.title">{{tile.title}}</p>
-    <p class="tile__body" *ngIf="tile.body?.length">
-      <app-cms-rich-text-renderer [text]="tile.body"></app-cms-rich-text-renderer>
+  <div class='tile__text' *ngIf='tile.title || tile.body?.length'>
+    <p class='tile__title' *ngIf='tile.title'>{{tile.title}}</p>
+    <p class='tile__body' *ngIf='tile.body?.length'>
+      <app-cms-rich-text-renderer [text]='tile.body'></app-cms-rich-text-renderer>
     </p>
   </div>
-
-  <picture class="tile__img">
-    <source *ngIf="tile.wide" [srcset]="tile.image.wide" media="(min-width: 768px)">
-    <source *ngIf="!tile.wide" [srcset]="tile.image.default" media="(min-width: 768px)">
-    <source [srcset]="tile.image.wide" media="(min-width: 376px)">
-    <img [src]="tile.image.default" [alt]="tile.image.alt" [attr.aria-hidden]="!!tile.title || !!tile.body" />
-  </picture>
 
 </div>

@@ -7,20 +7,14 @@ const home: Route = {
   loadChildren: () => import('./pages/cms/cms.module').then(mod => mod.CmsModule)
 };
 
-const levelZero: Route = {
+const cms: Route = {
   path: ':uid',
-  loadChildren: () => import('./pages/cms/cms.module').then(mod => mod.CmsModule)
-};
-
-const levelOne: Route = {
-  path: ':unused/:uid',
   loadChildren: () => import('./pages/cms/cms.module').then(mod => mod.CmsModule)
 };
 
 const routes: Route[] = [
   home,
-  levelZero,
-  levelOne,
+  cms,
 ];
 
 @NgModule({
