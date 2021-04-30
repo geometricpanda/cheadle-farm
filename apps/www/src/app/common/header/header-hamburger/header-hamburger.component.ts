@@ -1,6 +1,6 @@
 import { Component, ElementRef, EventEmitter, Output, ViewChild } from '@angular/core';
 import { MenuService } from '@cheadle-farm/menu';
-import { filter } from 'rxjs/operators';
+import { filter, skip } from 'rxjs/operators';
 
 @Component({
   selector: 'app-header-hamburger',
@@ -13,6 +13,7 @@ export class HeaderHamburgerComponent {
 
   focusOnOpenButtonSub = this.menuService
     .isOpen
+    .pipe(skip(1))
     .pipe(filter(value => value === false))
     .subscribe(() => setTimeout(() => this.openButton.nativeElement.focus(), 100));
 
