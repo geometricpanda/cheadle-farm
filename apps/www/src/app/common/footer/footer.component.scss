@@ -24,10 +24,13 @@
   list-style: none;
 }
 
+.footer-links__item {
+}
+
 .footer-link {
   display: inline-block;
   border: 1px solid transparent;
-  padding: 5px 10px;
+  padding: 8px 10px;
   text-decoration: none;
   letter-spacing: 1px;
   font-family: var(--body-font-family);

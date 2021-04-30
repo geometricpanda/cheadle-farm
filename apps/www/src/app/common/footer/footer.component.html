@@ -7,7 +7,7 @@
       <div class="footer-link-group">
         <h2 class="footer-link-title">Links</h2>
         <ul class="footer-links">
-          <li class="footer-link__item" *ngFor="let link of appLinksService.mainLinks">
+          <li class="footer-links__item" *ngFor="let link of appLinksService.mainLinks">
             <a class="footer-link" [routerLink]="link.routerlink">{{link.title}}</a>
           </li>
         </ul>
