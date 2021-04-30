@@ -6,6 +6,7 @@ import { cardSliceParser } from './cards-slice.parser';
 import { tileSliceParser } from './tile-slice.parser';
 import { collectionSliceParser } from './collection-slice.parser';
 import { contactFormParser } from './contact-form.parser';
+import { definitionListSliceParser } from './definition-list-slice.parser';
 
 const parserMethods = {
   [PRISMIC_SLICE.TEXT]: textSliceParser,
@@ -14,6 +15,7 @@ const parserMethods = {
   [PRISMIC_SLICE.TILES]: tileSliceParser,
   [PRISMIC_SLICE.COLLECTION]: collectionSliceParser,
   [PRISMIC_SLICE.CONTACT_FORM]: contactFormParser,
+  [PRISMIC_SLICE.DEFINITION_LIST]: definitionListSliceParser,
 };
 
 export const slicesParser = (slices: PrismicDynamic[]): SlicesInterface =>

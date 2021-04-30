@@ -1,18 +1,19 @@
-<ng-container *ngIf="content; else loading">
-  <ng-container *ngFor="let slice of content.slices" [ngSwitch]="slice.type">
-    <app-cms-hero *ngSwitchCase="SLICE.HERO" [slice]="slice"></app-cms-hero>
-    <app-cms-cards *ngSwitchCase="SLICE.CARDS" [slice]="slice"></app-cms-cards>
-    <app-cms-tiles *ngSwitchCase="SLICE.TILES" [slice]="slice"></app-cms-tiles>
-    <app-cms-text *ngSwitchCase="SLICE.TEXT" [slice]="slice"></app-cms-text>
-    <app-cms-collection *ngSwitchCase="SLICE.COLLECTION" [slice]="slice"></app-cms-collection>
-    <app-cms-contact-form *ngSwitchCase="SLICE.CONTACT_FORM" [slice]="slice"></app-cms-contact-form>
+<ng-container *ngIf='content; else loading'>
+  <ng-container *ngFor='let slice of content.slices' [ngSwitch]='slice.type'>
+    <app-cms-hero *ngSwitchCase='SLICE.HERO' [slice]='slice'></app-cms-hero>
+    <app-cms-cards *ngSwitchCase='SLICE.CARDS' [slice]='slice'></app-cms-cards>
+    <app-cms-tiles *ngSwitchCase='SLICE.TILES' [slice]='slice'></app-cms-tiles>
+    <app-cms-text *ngSwitchCase='SLICE.TEXT' [slice]='slice'></app-cms-text>
+    <app-cms-collection *ngSwitchCase='SLICE.COLLECTION' [slice]='slice'></app-cms-collection>
+    <app-cms-contact-form *ngSwitchCase='SLICE.CONTACT_FORM' [slice]='slice'></app-cms-contact-form>
+    <app-cms-definition-list *ngSwitchCase='SLICE.DEFINITION_LIST' [slice]='slice'></app-cms-definition-list>
   </ng-container>
 </ng-container>
 
 <ng-template #loading>
   <div container>
     <div row center>
-      <div col="auto">
+      <div col='auto'>
         <app-loading></app-loading>
       </div>
     </div>

@@ -12,13 +12,7 @@ import {
   PrismicService
 } from '../../services/prismic';
 
-import {
-  getPage,
-  GetPageActionInterface,
-  PAGES_ACTION,
-  savePage,
-  SavePageActionInterface
-} from './pages.actions';
+import { getPage, GetPageActionInterface, PAGES_ACTION, savePage, SavePageActionInterface } from './pages.actions';
 
 import { selectUids } from './pages.selectors';
 

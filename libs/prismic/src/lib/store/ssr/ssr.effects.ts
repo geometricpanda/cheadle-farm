@@ -7,7 +7,7 @@ import { Store } from '@ngrx/store';
 import { filter, map, tap } from 'rxjs/operators';
 
 import { AppState } from '../app.state';
-import { PagesReducerState, selectPages, hydratePages } from '../pages';
+import { hydratePages, PagesReducerState, selectPages } from '../pages';
 
 const pagesTransferKey = makeStateKey<PagesReducerState>(null);
 

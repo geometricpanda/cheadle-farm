@@ -1,7 +1,10 @@
-<div container>
+<div container class='cards'>
   <ng-container *ngFor="let card of slice.body">
-    <div class="card">
+    <div class="card" *ngIf='!card.link'>
       <app-cms-card [card]="card"></app-cms-card>
     </div>
+    <a [href]='card.link.url' class="card" *ngIf='card.link'>
+      <app-cms-card [card]="card"></app-cms-card>
+    </a>
   </ng-container>
 </div>

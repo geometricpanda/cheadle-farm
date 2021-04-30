@@ -1,0 +1,14 @@
+<div container class='mb-4'>
+  <div row center>
+    <div col='12' md='10' lg='8'>
+      <dl class='definition-list'>
+        <ng-container *ngFor='let pairing of slice.body'>
+          <dt class='definition-list__term'>{{pairing.term}}</dt>
+          <dd class='definition-list__definition'>
+            <app-cms-rich-text-renderer [text]='pairing.definition'></app-cms-rich-text-renderer>
+          </dd>
+        </ng-container>
+      </dl>
+    </div>
+  </div>
+</div>

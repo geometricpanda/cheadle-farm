@@ -14,3 +14,5 @@ export * from './cms-tiles/cms-tiles/cms-tiles.component';
 export * from './cms-tiles/cms-tile/cms-tile.component';
 export * from './cms-contact-form/cms-contact-form.module';
 export * from './cms-contact-form/cms-contact-form.component';
+export * from './cms-definition-list/cms-definition-list.module';
+export * from './cms-definition-list/cms-definition-list.component';

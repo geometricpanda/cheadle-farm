@@ -9,7 +9,7 @@ import {
   CmsCardsModule,
   CmsTilesModule,
   CmsCollectionModule,
-  CmsContactFormModule
+  CmsContactFormModule, CmsDefinitionListModule
 } from '../cms';
 import { GridModule } from '../common';
 
@@ -29,6 +29,7 @@ import { GridModule } from '../common';
     CmsTilesModule,
     CmsCollectionModule,
     CmsContactFormModule,
+    CmsDefinitionListModule,
     GridModule,
   ],
 })

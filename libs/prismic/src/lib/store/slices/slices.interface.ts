@@ -18,6 +18,12 @@ export interface CardInterface {
 }
 
 
+export interface DefinitionListInterface {
+  term: string;
+  definition: RichTextInterface[];
+}
+
+
 export interface TileInterface {
   image: {
     default: string;
@@ -33,6 +39,11 @@ export interface TileInterface {
 export interface CardsSliceInterface {
   type: PRISMIC_SLICE.CARDS;
   body: CardInterface[]
+}
+
+export interface DefinitionListSliceInterface {
+  type: PRISMIC_SLICE.DEFINITION_LIST;
+  body: DefinitionListInterface[]
 }
 
 export interface TilesSliceInterface {
@@ -82,6 +93,7 @@ export type SliceInterface =
   | CardsSliceInterface
   | TilesSliceInterface
   | CollectionSliceInterface
-  | ContactFormSliceInterface;
+  | ContactFormSliceInterface
+  | DefinitionListSliceInterface;
 
 export type SlicesInterface = SliceInterface[];
