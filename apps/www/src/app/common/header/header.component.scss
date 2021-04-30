@@ -3,14 +3,11 @@
 
 :host {
   display: block;
-  position: sticky;
-  top: 0;
-  z-index: 97;
+  padding-top: 105px;
 
 
   @include breakpoint-up-and-desktop($breakpoint-md) {
-    margin: auto;
-    position: relative;
+    padding-top: 0;
   }
 }
 
@@ -20,6 +17,17 @@
   padding: 10px 10px 5px;
   align-items: center;
   background-color: var(--brown);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 97;
+
+
+  @include breakpoint-up-and-desktop($breakpoint-md) {
+    margin: auto;
+    position: relative;
+  }
 }
 
 .header__row {

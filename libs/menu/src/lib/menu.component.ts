@@ -3,7 +3,7 @@ import { MenuService } from './menu.service';
 import { Links } from './menu.interface';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { ActivationEnd, Router } from '@angular/router';
-import { filter, skip, tap } from 'rxjs/operators';
+import { filter, skip, take, tap } from 'rxjs/operators';
 import { Subscription } from 'rxjs';
 import { CdkTrapFocus } from '@angular/cdk/a11y';
 
@@ -67,6 +67,14 @@ export class MenuComponent implements OnInit, OnDestroy {
 
   close() {
     this.menuService.closeMenu();
+  }
+
+  conditionalClose() {
+    this.menuService
+      .isOpen
+      .pipe(take(1))
+      .pipe(filter(isOpen => isOpen === true))
+      .subscribe(() => this.menuService.closeMenu());
   }
 
 
