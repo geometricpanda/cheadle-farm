@@ -68,7 +68,16 @@ export interface PrismicHeroSlice {
         alt: string;
         copyright: string;
         url: string;
-      }
+      };
+      small: {
+        dimensions: {
+          width: number;
+          height: number;
+        };
+        alt: string;
+        copyright: string;
+        url: string;
+      };
     }
   };
   items: any[]

@@ -19,7 +19,7 @@ $grid-breakpoints: (
   margin-right: -8px;
   padding: 8px;
 
-  @media (min-width: map-get($grid-breakpoints, 'md')) {
+  @media (min-width: map-get($grid-breakpoints, 'sm')) {
     min-height: 400px;
     margin-left: 0;
     margin-right: 0;
@@ -37,7 +37,6 @@ $grid-breakpoints: (
   top: 50%;
   transform: translate(-50%, -50%);
   position: absolute;
-  opacity: 0.9;
 }
 
 .hero__text {

@@ -1,18 +1,19 @@
 import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class MenuService {
 
-  isOpen = false;
+  isOpen = new Subject<boolean>();
 
   closeMenu() {
-    this.isOpen = false;
+    this.isOpen.next(false);
   }
 
   openMenu() {
-    this.isOpen = true;
+    this.isOpen.next(true);
   }
 
 

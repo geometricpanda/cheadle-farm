@@ -1,20 +1,25 @@
 @import "../../../styles/variables";
 @import "../../../styles/mixins";
 
-.header {
-  display: flex;
-  flex-direction: column;
-  padding: 10px 10px 5px;
-  align-items: center;
+:host {
+  display: block;
   position: sticky;
   top: 0;
   z-index: 97;
-  background-color: var(--brown);
+
 
   @include breakpoint-up-and-desktop($breakpoint-md) {
     margin: auto;
     position: relative;
   }
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 10px 5px;
+  align-items: center;
+  background-color: var(--brown);
 }
 
 .header__row {

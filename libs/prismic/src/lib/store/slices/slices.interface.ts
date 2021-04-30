@@ -52,6 +52,7 @@ export interface HeroSliceInterface {
   body: RichTextInterface[];
   image: {
     default: string;
+    small: string;
     medium: string;
     large: string;
     alt: string;

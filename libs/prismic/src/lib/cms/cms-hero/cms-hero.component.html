@@ -10,7 +10,8 @@
 
     <picture>
       <source [srcset]="slice.image.large" media="(min-width: 1150px)">
-      <source [srcset]="slice.image.medium" media="(min-width: 768px)">
+      <source [srcset]="slice.image.medium" media="(min-width: 576px)">
+      <source [srcset]="slice.image.small" media="(min-width: 768px)">
       <img class="hero__img"
            [src]="slice.image.default"
            [alt]="slice.image.alt"

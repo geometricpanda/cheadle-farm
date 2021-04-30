@@ -8,6 +8,7 @@ export const heroSliceParser = (slice: PrismicHeroSlice): HeroSliceInterface => 
   body: parseRichTextUtil(slice.primary.hero_body),
   image: {
     default: slice.primary.hero_image.url,
+    small: slice.primary.hero_image.small.url,
     medium: slice.primary.hero_image.medium.url,
     large: slice.primary.hero_image.large.url,
     alt: slice.primary.hero_image.alt

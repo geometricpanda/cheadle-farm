@@ -47,11 +47,12 @@
   justify-content: center;
   height: 46px;
   width: 46px;
-  color: var(--color-white);
+  color: var(--white);
   background-color: transparent;
-  border: 2px solid var(--color-white);
+  border: 2px solid var(--white);
   outline: none;
   margin: 0;
+  padding: 0;
   transition-property: color, border;
   transition-duration: 0.3s;
 
@@ -70,7 +71,7 @@
 
 .menu__link {
   display: inline-block;
-  color: var(--color-white);
+  color: var(--white);
   font-family: var(--body-font-family);
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -90,8 +91,8 @@
 }
 
 .menu__link--active {
-  color: var(--brown-dark);
-  border-bottom-color: var(--brown-dark);
+  color: var(--white);
+  border-bottom-color: var(--white);
 }
 
 .menu__link--active:focus {

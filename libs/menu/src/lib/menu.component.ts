@@ -31,8 +31,14 @@ export class MenuComponent implements OnInit, OnDestroy {
   @Input() links: Links;
   @Output() scroll = new EventEmitter<Event>();
   @ViewChild('page') page: ElementRef<HTMLDivElement>;
+  @ViewChild('closeButton') closeButton: ElementRef<HTMLButtonElement>;
 
   $router: Subscription;
+
+  focusOnCloseButtonSub = this.menuService
+    .isOpen
+    .pipe(filter(value => value === true))
+    .subscribe(() => setTimeout(() => this.closeButton.nativeElement.focus(), 100));
 
   constructor(public menuService: MenuService,
               private router: Router) {
@@ -48,7 +54,7 @@ export class MenuComponent implements OnInit, OnDestroy {
   }
 
   scrollToTop() {
-    // this.page.nativeElement.scrollTo(0, 0);
+    this.page.nativeElement.scrollTo(0, 0);
   }
 
   ngOnDestroy() {
