@@ -1,11 +1,10 @@
-import { Component, ElementRef, EventEmitter, Input, OnDestroy, OnInit, Output, ViewChild } from '@angular/core';
+import { Component, ElementRef, Input, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { MenuService } from './menu.service';
 import { Links } from './menu.interface';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { ActivationEnd, Router } from '@angular/router';
-import { filter, skip, take, tap } from 'rxjs/operators';
+import { filter, skip, take } from 'rxjs/operators';
 import { Subscription } from 'rxjs';
-import { CdkTrapFocus } from '@angular/cdk/a11y';
 
 @Component({
   selector: 'cheadle-farm-menu',
@@ -29,8 +28,6 @@ export class MenuComponent implements OnInit, OnDestroy {
 
 
   @Input() links: Links;
-  @Output() scroll = new EventEmitter<Event>();
-  @ViewChild('page') page: ElementRef<HTMLDivElement>;
   @ViewChild('closeButton') closeButton: ElementRef<HTMLButtonElement>;
 
   $router: Subscription;
@@ -49,20 +46,11 @@ export class MenuComponent implements OnInit, OnDestroy {
       .events
       .pipe(skip(1))
       .pipe(filter(event => event instanceof ActivationEnd))
-      .pipe(tap(() => this.scrollToTop()))
       .subscribe(() => this.close());
-  }
-
-  scrollToTop() {
-    this.page.nativeElement.scrollTo(0, 0);
   }
 
   ngOnDestroy() {
     this.$router.unsubscribe();
-  }
-
-  onScroll($event) {
-    this.scroll.emit($event);
   }
 
   close() {

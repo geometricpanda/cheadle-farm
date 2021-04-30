@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { environment } from '../environments/environment';
 import { AppLinksService } from './app-links.service';
 
@@ -18,6 +18,7 @@ export class AppComponent {
   constructor(public appLinks: AppLinksService) {
   }
 
+  @HostListener('window:scroll')
   onScroll() {
     this.googleMapsShow = true;
   }
