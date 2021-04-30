@@ -21,13 +21,14 @@ $grid-breakpoints: (
   border-top: 1px solid var(--brown);
   padding: 16px 16px 0;
   font-size: 1.2rem;
-  font-weight: 300;
+  font-weight: bold;
   margin-bottom: 0;
 
   @media (min-width: map-get($grid-breakpoints, 'md')) {
     border-top-color: var(--white);
     background-color: var(--brown);
     color: var(--white);
+    font-weight: 300;
     padding: 16px;
     flex-basis: 40%;
   }
