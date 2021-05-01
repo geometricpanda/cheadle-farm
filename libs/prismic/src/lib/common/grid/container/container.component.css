@@ -9,8 +9,6 @@
 
 @media (--breakpoint-sm) {
   :host {
-    padding-left: var(--spacing-md);
-    padding-right: var(--spacing-md);
     max-width: var(--container-sm);
   }
 }

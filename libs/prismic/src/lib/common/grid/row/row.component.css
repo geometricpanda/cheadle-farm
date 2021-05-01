@@ -1,7 +1,7 @@
 :host {
   display: flex;
-  margin-left: var(--spacing-n-md);
-  margin-right: var(--spacing-n-md);
+  margin-left: var(--spacing-n-sm);
+  margin-right: var(--spacing-n-sm);
   flex-direction: row;
   flex-wrap: wrap;
 }

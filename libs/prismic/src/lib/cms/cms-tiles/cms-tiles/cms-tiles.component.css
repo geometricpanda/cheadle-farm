@@ -1,11 +1,19 @@
 .tiles {
   display: flex;
-  gap: var(--spacing-md);
+  margin: var(--spacing-n-sm);
   flex-direction: column;
+}
+
+.tile {
+  padding: var(--spacing-sm);
 }
 
 @media (--breakpoint-md) {
   .tiles {
-    gap: 0;
+    margin: 0;
+  }
+
+  .tile {
+    padding: 0;
   }
 }

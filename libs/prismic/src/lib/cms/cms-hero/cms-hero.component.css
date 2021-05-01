@@ -37,7 +37,7 @@
 }
 
 .hero__text {
-  font-family: var(--font-family);
+  font-family: var(--body-font-family);
   background-color: var(--brown);
   position: absolute;
   padding: var(--spacing-sm);
@@ -58,7 +58,7 @@
 
 .hero__title {
   color: var(--white) !important;
-  font-family: var(--font-family);
+  font-family: var(--heading-font-family);
   font-size: 1.8rem;
   margin-bottom: var(--spacing-sm);
 }

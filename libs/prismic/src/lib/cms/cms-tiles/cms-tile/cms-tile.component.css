@@ -37,12 +37,12 @@
 
 
 .tile__image {
-  aspect-ratio: 1.4;
   overflow: hidden;
 }
 
 @media (--breakpoint-md) {
   .tile__image {
+    aspect-ratio: 1.4;
     flex-basis: 50%;
   }
 }
@@ -55,7 +55,7 @@
 
 .tile__title {
   color: var(--tile-foreground);
-  font-family: var(--font-family);
+  font-family: var(--heading-font-family);
   font-size: 1.3rem;
   font-weight: bold;
   margin-bottom: var(--spacing-md);
