@@ -45,12 +45,13 @@
   display: inline-block;
   right: 0;
   bottom: 0;
-  max-width: 50%;
+  max-width: 75%;
   text-align: right;
 }
 
 @media (--breakpoint-sm) {
   .hero__text {
+    max-width: 50%;
     padding: var(--spacing-md);
   }
 }
