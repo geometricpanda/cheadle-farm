@@ -1,9 +1,0 @@
-.text-center {
-  text-align: center;
-}
-
-@media (--breakpoint-md) {
-  .text-md-center {
-    text-align: center;
-  }
-}
