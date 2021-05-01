@@ -1,6 +1,3 @@
-@import "../config";
-@import "../utils";
-
 $columns: 12;
 
 @mixin _grid($key) {
@@ -33,25 +30,25 @@ $columns: 12;
 :host {
   display: flex;
   flex-direction: column;
-  padding-left: $grid-gutter-width;
-  padding-right: $grid-gutter-width;
+  padding-left: var(--spacing-sm);
+  padding-right: var(--spacing-sm);
   flex-grow: 1;
 }
 
 @include _utils(col);
 @include _grid(col);
 
-@include breakpoint-up(sm) {
+@media (--breakpoint-sm) {
   @include _grid(sm);
   @include _utils(sm);
 }
 
-@include breakpoint-up(md) {
+@media (--breakpoint-md) {
   @include _grid(md);
   @include _utils(md);
 }
 
-@include breakpoint-up(lg) {
+@media (--breakpoint-lg) {
   @include _grid(lg);
   @include _utils(lg);
 }

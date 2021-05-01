@@ -5,7 +5,7 @@ import { AppLinksService } from './app-links.service';
 @Component({
   selector: 'cheadle-farm-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
   googleMapsApikey = environment.googleMapsPublicKey;

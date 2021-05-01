@@ -128,20 +128,11 @@ export interface PrismicTileSlice {
     alt: string;
     copyright: string;
     url: string;
-    wide: {
-      dimensions: {
-        width: number;
-        height: number;
-      };
-      alt: string;
-      copyright: string;
-      url: string;
-    };
   };
+  tile_light: boolean;
   tile_title: string;
   tile_content: PrismicRichTextItem[];
-  tile_link: PrismicDocumentLink;
-  tile_wide: boolean;
+  tile_alignment: boolean;
 }
 
 export interface PrismicTilesSlice {

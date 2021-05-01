@@ -1,23 +1,26 @@
-.call {
+.hamburger {
   height: 46px;
   width: 46px;
   padding: 10px;
   border: 1px solid transparent;
   background-color: transparent;
   color: var(--corn);
-  display: block;
   outline: none;
+  overflow: hidden;
   transition-property: color, border;
   transition-duration: 0.3s;
-
-  &:focus {
-    border-color: var(--white);
-    color: var(--white);
-  }
 }
 
-.call__svg {
-  path {
-    fill: currentColor;
-  }
+.hamburger:focus {
+  border-color: var(--white);
+  color: var(--white);
+}
+
+.hamburger__svg {
+  width: 100%;
+  height: 100%;
+}
+
+.hamburger__svg rect {
+  fill: currentColor;
 }

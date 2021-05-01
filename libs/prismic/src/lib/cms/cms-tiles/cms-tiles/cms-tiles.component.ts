@@ -4,7 +4,7 @@ import { TilesSliceInterface } from '../../../store/slices';
 @Component({
   selector: 'app-cms-tiles',
   templateUrl: './cms-tiles.component.html',
-  styleUrls: ['./cms-tiles.component.scss']
+  styleUrls: ['./cms-tiles.component.css']
 })
 export class CmsTilesComponent {
   @Input() slice: TilesSliceInterface;

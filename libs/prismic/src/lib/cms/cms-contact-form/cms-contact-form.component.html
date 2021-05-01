@@ -1,14 +1,14 @@
-<div container class='mb-4'>
+<div container>
   <div row center>
     <div col='12' md='8' lg='6'>
 
 
-      <div class='mb-4 error' tabindex='-1' *ngIf='submissionSuccess' #successEl>
+      <div class='error' tabindex='-1' *ngIf='submissionSuccess' #successEl>
         <h3>Thanks</h3>
         <p>We've received your form, thanks. A member of our team will be in touch soon.</p>
       </div>
 
-      <div class='mb-4 error' tabindex='-1' *ngIf='submitted && errors.length' #oopsValidator>
+      <div class='error' tabindex='-1' *ngIf='submitted && errors.length' #oopsValidator>
         <h3>Oops It looks like we have a problem</h3>
         <ul>
           <li *ngFor='let error of errors'>
@@ -17,7 +17,7 @@
         </ul>
       </div>
 
-      <div class='mb-4 error' tabindex='-1' *ngIf='submissionError' #oopsError>
+      <div class='error' tabindex='-1' *ngIf='submissionError' #oopsError>
         <h3>Oops,</h3>
         <p>
           It looks like there's been a problem submitting the form.
@@ -38,7 +38,7 @@
                name='form-name'
                formControlName='formName' />
 
-        <div class='form-control d-none'>
+        <div class='form-control hidden'>
 
           <div class='form-control__heading'>
             <label class='form-control__label form-control__label--required' for='bot-field'>

@@ -1,5 +1,5 @@
 <ng-container *ngIf='content; else loading'>
-  <ng-container *ngFor='let slice of content.slices' [ngSwitch]='slice.type'>
+  <div class='slice' *ngFor='let slice of content.slices' [ngSwitch]='slice.type'>
     <app-cms-hero *ngSwitchCase='SLICE.HERO' [slice]='slice'></app-cms-hero>
     <app-cms-cards *ngSwitchCase='SLICE.CARDS' [slice]='slice'></app-cms-cards>
     <app-cms-tiles *ngSwitchCase='SLICE.TILES' [slice]='slice'></app-cms-tiles>
@@ -7,7 +7,7 @@
     <app-cms-collection *ngSwitchCase='SLICE.COLLECTION' [slice]='slice'></app-cms-collection>
     <app-cms-contact-form *ngSwitchCase='SLICE.CONTACT_FORM' [slice]='slice'></app-cms-contact-form>
     <app-cms-definition-list *ngSwitchCase='SLICE.DEFINITION_LIST' [slice]='slice'></app-cms-definition-list>
-  </ng-container>
+  </div>
 </ng-container>
 
 <ng-template #loading>

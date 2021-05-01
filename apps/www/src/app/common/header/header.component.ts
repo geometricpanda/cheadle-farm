@@ -4,7 +4,7 @@ import { MenuService } from '@cheadle-farm/menu';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
 
@@ -14,6 +14,5 @@ export class HeaderComponent {
   open() {
     this.menuService.openMenu();
   }
-
-
+  
 }

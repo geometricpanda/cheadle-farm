@@ -1,18 +1,10 @@
 <div container>
   <div class='tiles'>
 
-    <div *ngFor="let tile of slice.body" class="tile" [class.tile--wide]='tile.wide'>
-
-      <a *ngIf="tile.link && !tile.link.broken"
-         app-cms-tile
-         [tile]="tile"
-         class="tile__content"
-         [routerLink]="['/', tile.link.url]">
-      </a>
+    <div *ngFor="let tile of slice.body">
 
       <div *ngIf="!tile.link || tile.link.broken"
            app-cms-tile
-           class="tile__content"
            [tile]="tile">
       </div>
 

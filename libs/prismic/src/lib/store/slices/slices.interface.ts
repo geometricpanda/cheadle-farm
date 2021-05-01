@@ -27,13 +27,12 @@ export interface DefinitionListInterface {
 export interface TileInterface {
   image: {
     default: string;
-    wide: string;
     alt: string;
   };
-  wide: boolean;
+  alignment: boolean;
   title: string;
+  light: boolean;
   body: RichTextInterface[];
-  link: DocumentRefInterface;
 }
 
 export interface CardsSliceInterface {

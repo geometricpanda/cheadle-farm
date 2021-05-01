@@ -4,7 +4,8 @@ import { PageInterface } from '../store/pages/pages.reducer';
 
 @Component({
   selector: 'app-renderer',
-  templateUrl: './renderer.component.html'
+  templateUrl: './renderer.component.html',
+  styleUrls: ['./renderer.component.css']
 })
 export class RendererComponent {
   SLICE = PRISMIC_SLICE;

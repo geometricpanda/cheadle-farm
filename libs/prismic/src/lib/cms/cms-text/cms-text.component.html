@@ -1,8 +1,8 @@
-<div container class="mb-4">
- <div row center>
-   <div col="12" md="10" lg="8">
-     <h2 class="mb-3" *ngIf="slice.title">{{slice.title}}</h2>
-     <app-cms-rich-text-renderer [text]="slice.body"></app-cms-rich-text-renderer>
-   </div>
- </div>
+<div container>
+  <div row center>
+    <div col='12' md='10' lg='8' class='text-center'>
+      <h2 *ngIf='slice.title'>{{slice.title}}</h2>
+      <app-cms-rich-text-renderer [text]='slice.body'></app-cms-rich-text-renderer>
+    </div>
+  </div>
 </div>

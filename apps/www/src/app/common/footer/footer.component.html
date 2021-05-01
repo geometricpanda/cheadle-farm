@@ -1,36 +1,39 @@
-<div class="footer-wrapper">
+<div class='footer-wrapper'>
 
-  <div class="footer container pt-5 pb-2">
+  <div class='footer' container>
+    <div row center>
+      <div col='12' md='8'>
+        <div class='footer-link-groups'>
 
-    <div class="footer-link-groups">
+          <div class='footer-link-group'>
+            <h2 class='footer-link-title'>Links</h2>
+            <ul class='footer-links'>
+              <li class='footer-links__item' *ngFor='let link of appLinksService.mainLinks'>
+                <a class='footer-link' [routerLink]='link.routerlink'>{{link.title}}</a>
+              </li>
+            </ul>
+          </div>
 
-      <div class="footer-link-group">
-        <h2 class="footer-link-title">Links</h2>
-        <ul class="footer-links">
-          <li class="footer-links__item" *ngFor="let link of appLinksService.mainLinks">
-            <a class="footer-link" [routerLink]="link.routerlink">{{link.title}}</a>
-          </li>
-        </ul>
+          <div class='footer-link-group'>
+            <h2 class='footer-link-title'>Social Media</h2>
+            <ul class='footer-links'>
+              <li *ngFor='let link of appLinksService.socialLinks'>
+                <a class='footer-link' [href]='link.href' target='_blank'
+                   rel='nofollow noopener noreferrer'>{{link.title}}</a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+        <p class='footer-legals'>
+          &copy; Cheadle Farm 2020. All Rights Reserved.
+        </p>
+
+        <p class='footer-legals'>
+          Traditional Farmhouse Meat, Cheadle Farm, Nether Peover, Knutsford, Cheshire WA16 9SN
+        </p>
       </div>
-
-      <div class="footer-link-group">
-        <h2 class="footer-link-title">Social Media</h2>
-        <ul class="footer-links">
-          <li *ngFor="let link of appLinksService.socialLinks">
-            <a class="footer-link" [href]="link.href" target="_blank" rel="nofollow noopener noreferrer">{{link.title}}</a>
-          </li>
-        </ul>
-      </div>
-
     </div>
-
-    <p class="footer-legals">
-      &copy; Cheadle Farm 2020. All Rights Reserved.
-    </p>
-
-    <p class="footer-legals">
-      Traditional Farmhouse Meat, Cheadle Farm, Nether Peover, Knutsford, Cheshire WA16 9SN
-    </p>
   </div>
-
 </div>

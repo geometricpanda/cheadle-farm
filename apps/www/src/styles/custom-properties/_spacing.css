@@ -1,0 +1,14 @@
+:root {
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 64px;
+
+  --spacing-n-sm: calc(var(--spacing-sm) * -1);
+  --spacing-n-md: calc(var(--spacing-md) * -1);
+  --spacing-n-lg: calc(var(--spacing-lg) * -1);
+  --spacing-n-xl: calc(var(--spacing-xl) * -1);
+  --spacing-n-xxl: calc(var(--spacing-xxl) * -1);
+}

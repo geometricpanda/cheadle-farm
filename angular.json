@@ -48,7 +48,7 @@
             "tsConfig": "apps/www/tsconfig.app.json",
             "aot": true,
             "assets": ["apps/www/src/favicon.ico", "apps/www/src/assets"],
-            "styles": ["apps/www/src/styles.scss"],
+            "styles": ["apps/www/src/styles.css"],
             "scripts": []
           },
           "configurations": {

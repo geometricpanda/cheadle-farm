@@ -1,7 +1,0 @@
-@import "config";
-
-@mixin breakpoint-up($key) {
-  @media (min-width: map-get($grid-breakpoints, $key)) {
-    @content;
-  }
-}

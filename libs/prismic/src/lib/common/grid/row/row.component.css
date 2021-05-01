@@ -1,21 +1,19 @@
-@import "../config";
-
 :host {
   display: flex;
-  margin-left: $grid-gutter-width * -1;
-  margin-right: $grid-gutter-width * -1;
+  margin-left: var(--spacing-n-md);
+  margin-right: var(--spacing-n-md);
   flex-direction: row;
   flex-wrap: wrap;
 }
 
-:host[around]{
+:host[around] {
   justify-content: space-around;
 }
 
-:host[center]{
+:host[center] {
   justify-content: center;
 }
 
-:host[vcenter]{
+:host[vcenter] {
   align-items: center;
 }

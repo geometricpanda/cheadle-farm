@@ -1,10 +1,3 @@
-$grid-breakpoints: (
-  xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 1150px,
-);
-
 :host {
   display: block;
 }
@@ -12,16 +5,23 @@ $grid-breakpoints: (
 .card {
   background-color: var(--dark-grey);
   color: var(--white);
-  overflow: hidden;
   height: 360px;
   position: relative;
+}
 
-  @media (min-width: map-get($grid-breakpoints, 'md')) {
+@media (--breakpoint-sm) {
+  .card {
     width: 360px;
+    overflow: hidden;
   }
 }
 
+.card__picture,
 .card__img {
+  max-width: unset;
+}
+
+.card__picture {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -31,7 +31,7 @@ $grid-breakpoints: (
   position: absolute;
   left: 0;
   bottom: 0;
-  padding: 24px;
+  padding: var(--spacing-md);
   z-index: 1;
   display: inline-block;
   background: var(--brown);
@@ -41,10 +41,6 @@ $grid-breakpoints: (
   color: var(--white) !important;
   font-family: var(--font-family);
   font-size: 1.3rem;
-  margin-bottom: 8px;
-}
-
-.card__body {
   margin-bottom: var(--spacing-sm);
 }
 

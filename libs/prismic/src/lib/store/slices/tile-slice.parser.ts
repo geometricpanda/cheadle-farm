@@ -9,20 +9,11 @@ export const tileSliceParser = (slice: PrismicTilesSlice): TilesSliceInterface =
       .map((tile: PrismicTileSlice): TileInterface => ({
         title: tile.tile_title,
         body: parseRichTextUtil(tile.tile_content),
-        wide: tile.tile_wide,
+        alignment: tile.tile_alignment,
+        light: tile.tile_light,
         image: {
           default: tile.tile_image.url,
-          wide: tile.tile_image.wide.url,
           alt: tile.tile_image.alt
         },
-        link: {
-          id: tile.tile_link.id,
-          url: tile.tile_link.uid === 'home' ? '/' : tile.tile_link.uid,
-          broken: tile.tile_link.isBroken
-        }
-      }))
-      .map((tile: TileInterface) => ({
-        ...tile,
-        link: tile.link.id ? tile.link : null
       }))
   });

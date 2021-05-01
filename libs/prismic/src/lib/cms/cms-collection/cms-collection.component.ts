@@ -8,13 +8,13 @@ import { AppState, selectPagesByTags,PagesReducerState } from '../../store';
 @Component({
   selector: 'app-cms-collection',
   templateUrl: './cms-collection.component.html',
-  styleUrls: ['./cms-collection.component.scss']
+  styleUrls: ['./cms-collection.component.css']
 })
 export class CmsCollectionComponent implements OnChanges {
 
   @Input() slice: CollectionSliceInterface;
 
-  collection: Observable<PagesReducerState> = new Observable();
+  collection: Observable<PagesReducerState> = new Observable<PagesReducerState>();
 
   constructor(private store$: Store<AppState>) {
   }

@@ -1,14 +1,14 @@
-@import "../../../styles/variables";
-@import "../../../styles/mixins";
-
 .footer-wrapper {
   background-color: var(--brown);
+  padding-top: var(--spacing-xl);
 }
 
 .footer-link-groups {
   display: block;
+}
 
-  @include breakpoint-up($breakpoint-sm) {
+@media (--breakpoint-sm) {
+  .footer-link-groups {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
@@ -39,15 +39,15 @@
   color: var(--white);
   outline: none;
   transition: color 0.2s ease-in-out;
+}
 
-  &:hover {
-    color: var(--corn);
-  }
 
-  &:focus {
-    border-color: white;
-  }
+.footer-link:hover {
+  color: var(--corn);
+}
 
+.footer-link:focus {
+  border-color: white;
 }
 
 .footer-link,

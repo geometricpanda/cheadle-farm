@@ -5,7 +5,7 @@ import { TileInterface } from '../../../store/slices';
   // tslint:disable-next-line:component-selector
   selector: '[app-cms-tile]',
   templateUrl: './cms-tile.component.html',
-  styleUrls: ['./cms-tile.component.scss']
+  styleUrls: ['./cms-tile.component.css']
 })
 export class CmsTileComponent {
   @Input() tile: TileInterface;

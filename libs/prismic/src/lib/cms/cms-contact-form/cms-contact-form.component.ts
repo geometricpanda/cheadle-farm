@@ -20,7 +20,7 @@ enum ERROR_MESSAGE {
 @Component({
   selector: 'app-cms-contact-form',
   templateUrl: './cms-contact-form.component.html',
-  styleUrls: ['./cms-contact-form.component.scss'],
+  styleUrls: ['./cms-contact-form.component.css'],
 })
 export class CmsContactFormComponent implements OnInit, OnDestroy {
 

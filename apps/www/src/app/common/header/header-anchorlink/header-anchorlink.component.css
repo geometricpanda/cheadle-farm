@@ -12,9 +12,9 @@
   transition-property: color, border;
   transition-duration: 0.3s;
   outline: none;
+}
 
-  &:hover,
-  &:focus {
-    color: var(--white);
-  }
+.link:hover,
+.link:focus {
+  color: var(--white);
 }

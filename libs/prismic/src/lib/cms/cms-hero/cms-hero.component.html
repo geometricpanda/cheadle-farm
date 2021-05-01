@@ -1,22 +1,21 @@
 <div container>
-  <div class="hero">
+  <div class='hero'>
 
-    <div class="hero__text" *ngIf="slice.title || slice.body?.length">
-      <h1 class="hero__title" *ngIf="slice.title">{{slice.title}}</h1>
-      <span class="hero__body" *ngIf="slice.body?.length">
-        <app-cms-rich-text-renderer [text]="slice.body"></app-cms-rich-text-renderer>
+    <div class='hero__text' *ngIf='slice.title || slice.body?.length'>
+      <h1 class='hero__title' *ngIf='slice.title'>{{slice.title}}</h1>
+      <span class='hero__body' *ngIf='slice.body?.length'>
+        <app-cms-rich-text-renderer [text]='slice.body'></app-cms-rich-text-renderer>
       </span>
     </div>
 
-    <picture>
-      <source [srcset]="slice.image.large" media="(min-width: 1150px)" sizes='100vw'>
-      <source [srcset]="slice.image.medium" media="(min-width: 576px)" sizes='100vw'>
-      <source [srcset]="slice.image.small" media="(min-width: 768px)" sizes='100vw'>
-      <img class="hero__img"
-           sizes='100vw'
-           [src]="slice.image.default"
-           [alt]="slice.image.alt"
-           [attr.aria-hidden]="!!slice.title || !!slice.body" />
+    <picture class='hero__picture'>
+      <source [srcset]='slice.image.large' media='(min-width: 1150px)'>
+      <source [srcset]='slice.image.medium' media='(min-width: 576px)'>
+      <source [srcset]='slice.image.small' media='(min-width: 768px)'>
+      <img class='hero__img'
+           [src]='slice.image.default'
+           [alt]='slice.image.alt'
+           [attr.aria-hidden]='!!slice.title || !!slice.body' />
     </picture>
 
   </div>

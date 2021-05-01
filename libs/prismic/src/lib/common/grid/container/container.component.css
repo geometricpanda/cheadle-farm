@@ -1,0 +1,28 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  padding-left: var(--spacing-md);
+  padding-right: var(--spacing-md);
+}
+
+
+@media (--breakpoint-sm) {
+  :host {
+    padding-left: var(--spacing-md);
+    padding-right: var(--spacing-md);
+    max-width: var(--container-sm);
+  }
+}
+
+@media (--breakpoint-md) {
+  :host {
+    max-width: var(--container-md);
+  }
+}
+
+@media (--breakpoint-lg) {
+  :host {
+    max-width: var(--container-lg);
+  }
+}

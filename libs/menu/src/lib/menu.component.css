@@ -1,7 +1,3 @@
-@import ".././../../../apps/www/src/styles/variables";
-@import ".././../../../apps/www/src/styles/mixins";
-
-
 .menu {
   display: flex;
   flex-direction: row;
@@ -19,8 +15,10 @@
   box-shadow: 0 15px 20px -15px transparentize(#432818, 0.2);
   height: 100vh;
   overflow: hidden;
+}
 
-  @include breakpoint-up($breakpoint-sm) {
+@media (--breakpoint-sm) {
+  .menu--expanded .menu__page {
     transform: scale(0.8) translateX(400px) translateY(10vh);
   }
 }
@@ -38,8 +36,10 @@
 
   padding: 55px 10px 20px;
   max-width: 200px;
+}
 
-  @include breakpoint-up($breakpoint-sm) {
+@media (--breakpoint-sm) {
+  .menu__sidebar {
     max-width: 330px;
   }
 }
@@ -58,12 +58,12 @@
   padding: 0;
   transition-property: color, border;
   transition-duration: 0.3s;
+}
 
-  &:focus {
-    border-color: var(--brown-dark);
-    color: var(--brown-dark);
-  }
 
+.menu__close:focus {
+  border-color: var(--brown-dark);
+  color: var(--brown-dark);
 }
 
 .menu__links {
@@ -86,11 +86,11 @@
   border-bottom: 2px solid transparent;
   transition-property: color, border-bottom;
   transition-duration: 0.3s;
+}
 
-  &:focus {
-    outline: none;
-    color: var(--brown-dark);
-  }
+.menu__link:focus {
+  outline: none;
+  color: var(--brown-dark);
 }
 
 .menu__link--active {

@@ -3,7 +3,7 @@ import { Component, Input } from '@angular/core';
 @Component({
   // tslint:disable-next-line:component-selector
   selector: '[row]',
-  styleUrls: ['./row.component.scss'],
+  styleUrls: ['./row.component.css'],
   template: `<ng-content></ng-content>`
 })
 export class RowComponent {

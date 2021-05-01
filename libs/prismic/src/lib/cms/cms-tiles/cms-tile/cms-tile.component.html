@@ -1,7 +1,12 @@
 <div class='tile'
-     [style.background-image]='(tile.wide ? tile.image.wide : tile.image.default) | cmsTileImg'>
+     [class.tile--alignment]='tile.alignment'
+     [class.tile--light]='tile.light'>
 
-  <div class='tile__text' *ngIf='tile.title || tile.body?.length'>
+  <div class='tile__image'>
+    <img class='tile__img' [src]='tile.image.default' [alt]='tile.image.alt' />
+  </div>
+
+  <div class='tile__content' *ngIf='tile.title || tile.body?.length'>
     <p class='tile__title' *ngIf='tile.title'>{{tile.title}}</p>
     <p class='tile__body' *ngIf='tile.body?.length'>
       <app-cms-rich-text-renderer [text]='tile.body'></app-cms-rich-text-renderer>

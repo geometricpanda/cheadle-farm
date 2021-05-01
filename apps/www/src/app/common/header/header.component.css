@@ -1,12 +1,10 @@
-@import "../../../styles/variables";
-@import "../../../styles/mixins";
-
 :host {
   display: block;
   padding-top: 105px;
+}
 
-
-  @include breakpoint-up-and-desktop($breakpoint-md) {
+@media (--breakpoint-md) {
+  :host {
     padding-top: 0;
   }
 }
@@ -22,9 +20,11 @@
   left: 0;
   right: 0;
   z-index: 97;
+}
 
 
-  @include breakpoint-up-and-desktop($breakpoint-md) {
+@media (--breakpoint-md) {
+  .header {
     margin: auto;
     position: relative;
   }
@@ -36,8 +36,10 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
+}
 
-  @include breakpoint-up-and-desktop($breakpoint-md) {
+@media (--breakpoint-md) {
+  .header__row {
     justify-content: center;
   }
 }
@@ -49,23 +51,28 @@
 
 .header-icon {
   flex-shrink: 1;
+}
 
-  @include breakpoint-up-and-desktop($breakpoint-md) {
+@media (--breakpoint-md) {
+  .header-icon {
     display: none;
   }
 }
+
 
 .header__links {
   width: 100%;
 }
 
 .header__logo {
-  color: rgba(255,255,255, 0.4);
+  color: rgba(255, 255, 255, 0.4);
   width: 50px;
   margin: 5px auto;
   position: relative;
+}
 
-  @include breakpoint-up-and-desktop($breakpoint-md) {
+@media (--breakpoint-md) {
+  .header__logo {
     width: 100px;
     margin: 20px auto;
   }

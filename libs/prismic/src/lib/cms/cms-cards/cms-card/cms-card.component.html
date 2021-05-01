@@ -7,9 +7,9 @@
     </p>
   </div>
 
-  <picture class="card__img">
+  <picture class="card__picture">
     <source [srcset]="card.image.default" media="(min-width: 768px)">
-    <img [src]="card.image.wide" [alt]="card.image.alt" [attr.aria-hidden]="!!card.title || !!card.body" />
+    <img class='card__img' [src]="card.image.wide" [alt]="card.image.alt" [attr.aria-hidden]="!!card.title || !!card.body" />
   </picture>
 
 </div>

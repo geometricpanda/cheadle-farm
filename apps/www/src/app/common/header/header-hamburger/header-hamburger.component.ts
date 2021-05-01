@@ -5,7 +5,7 @@ import { filter, skip } from 'rxjs/operators';
 @Component({
   selector: 'app-header-hamburger',
   templateUrl: './header-hamburger.component.html',
-  styleUrls: ['./header-hamburger.component.scss'],
+  styleUrls: ['./header-hamburger.component.css'],
 })
 export class HeaderHamburgerComponent {
 
