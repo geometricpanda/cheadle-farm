@@ -6,10 +6,11 @@
   background-color: var(--dark-grey);
   color: var(--white);
   height: 360px;
+  width: 100%;
   position: relative;
 }
 
-@media (--breakpoint-sm) {
+@media (--breakpoint-md) {
   .card {
     width: 360px;
     overflow: hidden;
@@ -18,13 +19,9 @@
 
 .card__picture,
 .card__img {
-  max-width: unset;
-}
-
-.card__picture {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .card__text {

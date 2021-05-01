@@ -1,7 +1,7 @@
 <div container>
   <div class='tiles'>
 
-    <div *ngFor="let tile of slice.body">
+    <div *ngFor="let tile of slice.body" class='tile'>
 
       <div *ngIf="!tile.link || tile.link.broken"
            app-cms-tile

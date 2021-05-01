@@ -2,12 +2,16 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: var(--spacing-md);
+  margin: var(--spacing-n-sm);
 }
 
-@media (--breakpoint-sm) {
+.cards__item {
+  padding: var(--spacing-sm);
+  overflow: hidden;
+}
+
+@media (--breakpoint-md) {
   .cards {
-    padding: 0 var(--spacing-md);
     flex-direction: row;
   }
 }
