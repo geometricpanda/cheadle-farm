@@ -6,3 +6,7 @@
 .collection-item__title {
   margin-bottom: var(--spacing-sm);
 }
+
+.collection-item__description:last-child {
+  margin-bottom: 0;
+}
