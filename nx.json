@@ -12,7 +12,7 @@
     }
   },
   "projects": {
-    "www": { "tags": [] },
+    "www": { "tags": [],"implicitDependencies": ["prismic", "menu", "google-maps"] },
     "www-e2e": { "tags": [], "implicitDependencies": ["www"] },
     "prismic": { "tags": [] },
     "menu": { "tags": [] },
